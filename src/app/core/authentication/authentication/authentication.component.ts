@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-authentication',
@@ -10,13 +10,18 @@ export class AuthenticationComponent implements OnInit {
 
   showAuth:string;
 
-  constructor(private activatedroute:ActivatedRoute) { }
+  constructor(private activatedroute:ActivatedRoute,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.activatedroute.data.subscribe(data => {
       console.log('auth received', data)
       this.showAuth = data.auth
   })
+  }
+
+  route(params){
+    this.router.navigate(['/auth/' +params])
   }
 
 }
