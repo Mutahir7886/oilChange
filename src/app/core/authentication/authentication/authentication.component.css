@@ -1,4 +1,5 @@
-.background-image{
+/* .background-image{
+
     width: 100%;
     height: 100vh;
     object-fit: cover
@@ -7,7 +8,7 @@
 .main-body{
     width: 80%;
     height: 80vh;
-    /* background: beige; */
+    background: beige;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,6 +28,95 @@
     position: relative;
     overflow: hidden;
     opacity: 0.4;
+}
+
+.left-side::before{
+    content: url('../../../../assets/images/tmp_1621318755055.jpg');
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+     background: url('../../../../assets/images/tmp_1621318755055.jpg')
+
+} 
+
+.left-side-background-image{
+    position:absolute;
+    left:-30%;
+    top:-13%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover
+}
+
+.left-side-image{
+    left: 30px;
+    width: 560px;
+    height: 200px;
+    position: absolute;
+    bottom: 110px;
+}
+
+.left-side-heading{
+    position: absolute;
+    bottom: 55%;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 65px;
+}
+
+
+.right-side{
+    height: 100%;
+    width: calc(100% - 319px);
+    margin-left: auto;
+    background: white;
+}
+
+.circle-1{
+    background-color: rgb(252 230 0 / 40%);
+    height: 100%;
+    position: relative;
+    z-index: 2;
+} */
+
+
+.background-image{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover
+}
+
+.main-body{
+    width: 80%;
+    height: 80vh;
+    /* background: beige; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.small-banner{
+    height: 100%;
+    position: absolute;
+    /* try these both, select the one which feels better*/
+    background-image: linear-gradient(90deg, rgba(255,255, 255,0) 50%, rgba(255,255,255,1));
+    /* background-image: linear-gradient(45deg, rgba(255,255, 255,0) 72%, rgba(255,255,255,1) 84%), linear-gradient(90deg, rgba(255,255, 255,0) 38%, rgba(255,255,255,1) 88%); */
+}
+
+.left-side{
+    width: 638px;
+    height: 100%;
+    background: #ffe600;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.8;
 }
 
 /* .left-side::before{
@@ -71,7 +161,7 @@
 
 .right-side{
     height: 100%;
-    width: calc(100% - 319px);
+    width: calc(100% - 635px);
     margin-left: auto;
     background: white;
 }
