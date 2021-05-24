@@ -67,3 +67,12 @@
     display: flex;
       justify-content: center;
 }
+
+.sign-up-button{
+    padding: 0 40px;
+    background: #ffe600;
+}
+
+.sign-up-container{
+    text-align: right
+}

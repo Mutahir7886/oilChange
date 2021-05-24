@@ -48,10 +48,13 @@
     
     
 </div>
+<div class="sign-up-container" *ngIf="showUser === 'user' && step==='step1'">
+        <button class="sign-up-button"   mat-raised-button>Signup</button>
+</div>
 
 <div class="move-to-step-2"> 
         <p *ngIf="showUser === 'mechanic' && step==='step1'"> Step 1 of 2</p>
-        <button (click)="changeToStep()" *ngIf="showUser === 'mechanic' && step==='step1'" mat-raised-button>Next</button>
+        <button class="sign-up-button" (click)="changeToStep()" *ngIf="showUser === 'mechanic' && step==='step1'" mat-raised-button>Next</button>
 </div>
 
     <div class="step2"  *ngIf="showUser === 'mechanic' && step==='step2'">
@@ -72,12 +75,13 @@
                     <input matInput formControlName="availability" >
                     </mat-form-field>  
         </form>
-            
+    
+
         
     </div>
 
 <div class="move-to-step-2"> 
     <p *ngIf="showUser === 'mechanic' && step==='step2'"> Step 2 of 2</p>
-    <button (click)="changeToStep()" *ngIf="showUser === 'mechanic' && step==='step2'" mat-raised-button>Signup</button>
+    <button class="sign-up-button" (click)="changeToStep()" *ngIf="showUser === 'mechanic' && step==='step2'" mat-raised-button>Signup</button>
 </div>
     
