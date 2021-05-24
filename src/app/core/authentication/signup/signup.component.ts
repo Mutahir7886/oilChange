@@ -56,4 +56,9 @@ export class SignupComponent implements OnInit {
   changeToStep(){
     this.step= 'step2'
   }
+
+  userSignUp(form){
+    console.log('formGroup', form.value)
+    form.reset()
+  }
 }

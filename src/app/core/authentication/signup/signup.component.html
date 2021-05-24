@@ -1,5 +1,5 @@
 
-<h2 style="text-align: center; color: #ffe600;"> Create New Account</h2>
+<h2 style="text-align: center; color: #ffe600;margin: 0"> Create New Account</h2>
 <div *ngIf="showUser==='abc' "  class="main">
     
     <div (click)="show('user')" class="type mgright cursor">User</div>
@@ -23,6 +23,11 @@
                 <label>userName</label>
                 <input matInput formControlName="userName" >
              </mat-form-field>
+  
+             <mat-form-field class="example-full-width">
+                    <label>Email</label>
+                    <input matInput formControlName="emailAddress" >
+                 </mat-form-field>
 
             <mat-form-field class="example-full-width">
                 <label>cellNumber</label>
@@ -49,7 +54,7 @@
     
 </div>
 <div class="sign-up-container" *ngIf="showUser === 'user' && step==='step1'">
-        <button class="sign-up-button"   mat-raised-button>Signup</button>
+        <button [disabled]="formGroup.invalid" class="sign-up-button" (click)="userSignUp(formGroup)"  mat-raised-button>Signup</button>
 </div>
 
 <div class="move-to-step-2"> 
@@ -75,9 +80,6 @@
                     <input matInput formControlName="availability" >
                     </mat-form-field>  
         </form>
-    
-
-        
     </div>
 
 <div class="move-to-step-2"> 
