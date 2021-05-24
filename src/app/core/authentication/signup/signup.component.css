@@ -1,23 +1,69 @@
 .type{
-    padding: 34px;
-    width: 18%;
-    height: 10%;
     background: white;
-    border-radius: 12%;
-    text-align: center;
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(68 68 68 / 60%);
+    flex: 1 1 50%;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fce600;
+    font-weight: 498;
+    font-size: 25px;
 }
 
 .main{
-    background: yellow;
-    width: 90%;
-    height: 61%;
+    background: #ffe600;
     display: flex;
-    /* padding: 50px; */
-    /* margin: auto; */
-    justify-content: space-around;
-    margin: 0px 21px;
     border-radius: 20px;
-    align-items: center;
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    box-shadow: 5px 5px 5px rgb(68 68 68 / 60%);
+    padding: 40px;
+}
+
+.mgleft{
+    margin-left: 20px;
+}
+
+.mgright{
+    margin-right: 20px
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.type:hover{
+    background: #e2e0e0;
+
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .step1{
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+  }
+
+  .move-to-step-2{
+    text-align: right;
+    margin: -10px 40px;
+  }
+
+  .opacity-1{
+    opacity: 1
+}
+
+.step2{
+    display: flex;
+      justify-content: center;
 }

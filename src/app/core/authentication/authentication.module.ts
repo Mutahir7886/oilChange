@@ -4,6 +4,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignupComponent } from './signup/signup.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { Routes, RouterModule } from '@angular/router';
+import { SharedModule } from 'src/app/shared/shared/shared.module';
+import { MatFormFieldControl } from '@angular/material/form-field';
 
 const routes: Routes = [
 
@@ -23,6 +25,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    SharedModule,
   ],
   exports: [RouterModule]
 })

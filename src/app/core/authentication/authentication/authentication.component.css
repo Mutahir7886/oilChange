@@ -164,6 +164,11 @@
     width: calc(100% - 635px);
     margin-left: auto;
     background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 40px;
+    box-sizing: border-box;
 }
 
 .circle-1{
@@ -178,4 +183,45 @@
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    width: 100%;
 }
+
+.type{
+    background: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(68 68 68 / 60%);
+    flex: 1 1 50%;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fce600;
+    font-weight: 498;
+    font-size: 25px;
+}
+
+.main{
+    background: #ffe600;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(68 68 68 / 60%);
+    padding: 40px;
+}
+
+.mgleft{
+    margin-left: 20px;
+}
+
+.mgright{
+    margin-right: 20px
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.type:hover{
+    background: #e2e0e0;
+
+}
+

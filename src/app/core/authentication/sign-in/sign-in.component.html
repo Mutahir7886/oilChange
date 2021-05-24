@@ -1,1 +1,18 @@
-<p>sign-in works!</p>
+<div class="signin">
+    <form [formGroup]="formGroup" class="example-form">
+            <mat-form-field class="example-full-width">
+                <label>Email/Cell Number</label>
+                <input matInput formControlName="email" >
+            </mat-form-field>
+        
+            <mat-form-field class="example-full-width">
+                <label>Password</label>
+                <input matInput formControlName="password" >
+            </mat-form-field>
+            <div class="sign-in-container">
+                <button class="sign-in-button"  mat-raised-button>Sign In</button>
+            </div>
+
+    </form>
+  
+</div>

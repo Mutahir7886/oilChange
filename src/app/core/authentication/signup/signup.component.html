@@ -1,6 +1,83 @@
-<h2 style="text-align: center; color: yellow;"> Create New Account</h2>
-<div class="main">
+
+<h2 style="text-align: center; color: #ffe600;"> Create New Account</h2>
+<div *ngIf="showUser==='abc' "  class="main">
     
-    <div class="type">User</div>
-    <div class="type">Meachanic</div>
+    <div (click)="show('user')" class="type mgright cursor">User</div>
+    <div (click)="show('mechanic')" class="type mgleft cursor">Mechanic</div>
 </div>
+
+<div #step1 class="step1" *ngIf="showUser === 'user' || showUser==='mechanic'">
+    
+    <form *ngIf="step==='step1'" [formGroup]="formGroup" class="example-form">
+            <mat-form-field class="example-full-width">
+                <label>First name</label>
+                <input matInput formControlName="firstName" >
+            </mat-form-field>
+        
+            <mat-form-field class="example-full-width">
+                <label>lastName</label>
+                <input matInput formControlName="lastName" >
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width">
+                <label>userName</label>
+                <input matInput formControlName="userName" >
+             </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <label>cellNumber</label>
+                <input matInput formControlName="cellNumber" >
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <label>userType</label>
+                 <input matInput formControlName="userType" >
+            
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <label>password</label>
+                <input matInput formControlName="password" >
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <label>confirmPassword</label>
+                <input matInput formControlName="confirmPassword" >
+            </mat-form-field>
+    </form>
+    
+    
+</div>
+
+<div class="move-to-step-2"> 
+        <p *ngIf="showUser === 'mechanic' && step==='step1'"> Step 1 of 2</p>
+        <button (click)="changeToStep()" *ngIf="showUser === 'mechanic' && step==='step1'" mat-raised-button>Next</button>
+</div>
+
+    <div class="step2"  *ngIf="showUser === 'mechanic' && step==='step2'">
+    
+        <form [formGroup]="formGroup1" class="example-form">
+                <mat-form-field class="example-full-width">
+                    <label>Shop name</label>
+                    <input matInput formControlName="shopName" >
+                </mat-form-field>
+            
+                <mat-form-field class="example-full-width">
+                    <label>Shop Address</label>
+                    <input matInput formControlName="shopAddress" >
+                </mat-form-field>
+                
+                <mat-form-field class="example-full-width">
+                    <label>Availabilty</label>
+                    <input matInput formControlName="availability" >
+                    </mat-form-field>  
+        </form>
+            
+        
+    </div>
+
+<div class="move-to-step-2"> 
+    <p *ngIf="showUser === 'mechanic' && step==='step2'"> Step 2 of 2</p>
+    <button (click)="changeToStep()" *ngIf="showUser === 'mechanic' && step==='step2'" mat-raised-button>Signup</button>
+</div>
+    
