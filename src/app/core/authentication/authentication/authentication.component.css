@@ -225,3 +225,17 @@
 
 }
 
+
+
+.tab{
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 10px 10px;
+    opacity: 0.5;
+}
+
+.tab:hover{
+    opacity: 1;
+}

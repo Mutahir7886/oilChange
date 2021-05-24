@@ -45,8 +45,8 @@
                 <div class="right-side"> 
                     
                     <div class="selectTab">  
-                        <p style="cursor: pointer;" (click)="route('signin')" >Sign In</p>
-                        <p style="cursor: pointer;" (click)="route('signup')" >Sign Up</p> 
+                        <p class="tab" (click)="route('signin')" >Sign In</p>
+                        <p class="tab" (click)="route('signup')" >Sign Up</p> 
                     </div>
                     
                     <app-sign-in style="width: 100%" *ngIf="showAuth==='signIn'"> </app-sign-in>
@@ -56,4 +56,4 @@
             </div>
     </div>
         
-    <h2 style="text-align: center; color: #ffe600;"> Create New Account</h2>
+    <!-- <h2 style="text-align: center; color: #ffe600;"> Create New Account</h2> -->
