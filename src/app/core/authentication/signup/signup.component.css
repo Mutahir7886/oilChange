@@ -77,3 +77,11 @@
 .sign-up-container{
     text-align: right
 }
+
+::ng-deep .mat-form-field {
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 0.825;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+}
