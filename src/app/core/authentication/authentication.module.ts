@@ -6,13 +6,15 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { MatFormFieldControl } from '@angular/material/form-field';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
 
     { path: '', component: AuthenticationComponent},
     { path: 'signin', component: AuthenticationComponent , data :{auth:'signIn'}},
     { path: 'signup', component: AuthenticationComponent , data :{auth:'signup'}},
-  
+    { path: 'test', component: TestComponent , data :{auth:'signup'}},
+
   
 ];
 
@@ -20,7 +22,8 @@ const routes: Routes = [
   declarations: [
     SignInComponent,
     SignupComponent,
-    AuthenticationComponent 
+    AuthenticationComponent,
+    TestComponent 
   ],
   imports: [
     CommonModule,
